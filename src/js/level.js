@@ -110,7 +110,7 @@ export class Level extends Scene {
     const ui = new UI();
     this.add(ui);
 
-    const player = new Player(ui);
+    const player = new Player(-600, 200);
     this.add(player);
 
     this.hitEnemy = () => {

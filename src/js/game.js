@@ -1,6 +1,5 @@
 import "../css/style.css";
 import { Engine, DisplayMode, SolverStrategy, Vector } from "excalibur";
-
 import { Level } from "./level.js";
 import { Player } from "./player.js";
 import { UI } from "./ui.js";

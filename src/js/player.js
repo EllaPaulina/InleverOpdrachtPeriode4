@@ -17,10 +17,11 @@ import { Power } from "./power";
 import { Exit } from "./exit";
 import { Border } from "./pit";
 export class Player extends Actor {
-  constructor() {
+  constructor(x, y) {
     super({
       width: 15,
       height: 33,
+      pos: new Vector(x, y),
     });
     this.body.collisionType = CollisionType.Active;
     this.collisionCount = 0;
@@ -46,7 +47,6 @@ export class Player extends Actor {
   }
 
   onInitialize(engine) {
-    this.pos = new Vector(-600, 200);
     this.vel = new Vector(0, 0);
     this.scale.setTo(3, 3);
     this.z = 1;
@@ -113,8 +113,8 @@ export class Player extends Actor {
   }
   playerFall(evt) {
     if (evt.other instanceof Border) {
-      this.kill();
       console.log("player fell to death");
+      this.kill();
       this.scene.engine.goToScene("gameover");
     }
   }

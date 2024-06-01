@@ -1,5 +1,5 @@
 import "../css/style.css";
-import { Scene, Label, FontUnit, Font, Vector, Color } from "excalibur";
+import { Scene, Label, FontUnit, Font, Vector, Color, Keys } from "excalibur";
 import { Background } from "./background.js";
 
 export class GameOver extends Scene {
